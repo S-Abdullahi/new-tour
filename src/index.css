@@ -6,7 +6,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: linear-gradient(to bottom right, #cad2c5, #354f52);
-
+  background-repeat: no-repeat;
+  height: 100vh;
 }
 
 
@@ -14,15 +15,37 @@ body {
   text-align: center;
 }
 .tour-display{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  width: 70vw;
-  margin-left: 50%;
-  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .title{
   font-size: 3rem;
 }
 
+.textBtn{
+  border: none;
+  background-color: white;
+  color: rgb(65, 65, 239);
+  font-weight: 400;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+
+.tour-refresh{
+  font-size: 4rem;
+}
+
+.btn-refresh{
+  margin-top: 2rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.loading{
+  font-size: 4rem;
+  margin-top: 2rem
+}
 
