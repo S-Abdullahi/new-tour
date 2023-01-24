@@ -20,9 +20,13 @@ function App() {
     }
   }, []);
 
-  console.log(tour);
+  function deleteTour(e){
+      const element = e.target
+      console.log(element)
+  }
+
   const eachTour = tour.map((t) => {
-    return <Tile key={t.id} item={t} />;
+    return <Tile key={t.id} item={t} delete={deleteTour}/>;
   });
 
   return (
