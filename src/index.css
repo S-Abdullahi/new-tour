@@ -5,9 +5,24 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(to bottom right, #cad2c5, #354f52);
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+.app-con{
+  text-align: center;
 }
+.tour-display{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 70vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.title{
+  font-size: 3rem;
+}
+
+

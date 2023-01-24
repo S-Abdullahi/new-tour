@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import Tile from "./component/Card";
+import { Grid } from "@mui/material";
+import "./index.css";
 
 function App() {
+  const [tour, setTour] = useState([]);
+
+  useEffect(() => {
+    const url = "http://course-api.com/react-tours-project";
+    try {
+      async function tourdata() {
+        const res = await fetch(url);
+        const data = await res.json();
+        setTour(data);
+      }
+      tourdata();
+    } catch (err) {
+      console.error(err.message);
+    }
+  }, []);
+
+  console.log(tour);
+  const eachTour = tour.map((t) => {
+    return <Tile key={t.id} item={t} />;
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div className="app-con">
+    <h2 className="title">Tour</h2>
+      <div className="tour-display">{eachTour}
+      </div>
+    </div> 
   );
 }
 
