@@ -7,7 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-image: linear-gradient(to bottom right, #cad2c5, #354f52);
   background-repeat: no-repeat;
-  height: 100vh;
+  background-attachment: fixed;
 }
 
 
@@ -18,6 +18,8 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  height: auto;
+  align-items: flex-start;
 }
 
 .title{
